@@ -1,0 +1,38 @@
+
+.booking-container {
+  width: 1200px;
+  color: #43463b;
+  .booking-left {
+    .seat.isVip {
+      @apply bg-blue-500;
+    }
+    .seat.active {
+      background-color: #7dc71d;
+    }
+
+    .seat.checked {
+      background-color: #f26b38;
+      cursor: no-drop;
+    }
+  }
+  .booking-right {
+    .info-movie {
+      p {
+        padding-bottom: 5px;
+        border-bottom: 1px dotted #ced0da;
+        font-size: 13px;
+        margin-bottom: 15px;
+        b {
+          margin-right: 5px;
+        }
+        span {
+          margin-right: 10px;
+        }
+      }
+      p:last-child {
+        border: 0;
+        font-size: 16px;
+      }
+    }
+  }
+}
