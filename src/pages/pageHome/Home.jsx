@@ -79,7 +79,7 @@ const Home = () => {
           </Button>
         </div>
 
-        <div className="grid grid-cols-3 gap-3 ">
+        <div className="grid grid-cols-5 gap-5 ">
           {movieList
             .filter((item) =>
               query.isShowing === "false" ? item.sapChieu : !item.sapChieu
@@ -87,7 +87,7 @@ const Home = () => {
             .map((film) => (
               <div className="mt-3" key={film.maPhim}>
                 <div className="card h-100">
-                  <img className="h-100" src={film.hinhAnh} alt={film.name} />
+                  <img className="h-70" src={film.hinhAnh} alt={film.name} />
                   <div className="card-body">
                     <p className="text-20">{film.tenPhim}</p>
                     <button
