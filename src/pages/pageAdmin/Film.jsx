@@ -1,13 +1,13 @@
 import React, { Fragment, useEffect } from "react";
-import { Button, Table } from "antd";
+import { Button, Table, Typography, Form } from "antd";
 import { AudioOutlined } from "@ant-design/icons";
 import { Input, Space } from "antd";
 import { useDispatch, useSelector } from "react-redux";
 import { getMovieList, useQuanLyPhim } from "../../storeToolkit/quanLyPhim";
 import { NavLink } from "react-router-dom";
+import { useState } from "react";
 
 const { Search } = Input;
-
 const Film = () => {
   const { movieList } = useQuanLyPhim();
 
@@ -108,7 +108,12 @@ const Film = () => {
       render: (text, film) => {
         return (
           <Fragment>
-            <NavLink className="bg-dark text-white" to="/"></NavLink>
+            <button className="text-white bg-green-600 mr-3">
+              <i class="fa-sharp fa-solid px-2 fa-pen-to-square"></i>
+            </button>
+            <button className="text-white px-2 bg-red-600">
+              <i class="fa-sharp fa-solid fa-trash"></i>
+            </button>
           </Fragment>
         );
       },
