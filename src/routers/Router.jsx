@@ -2,15 +2,17 @@ import React from "react";
 import { useRoutes } from "react-router-dom";
 import MainLayout from "../components/layouts/MainLayout";
 import OurLayout from "../components/layouts/OurLayout";
-import AdminLayout from "../components/layouts/AdminLayout";
 import Home from "../pages/pageHome/Home";
 import Detail from "../pages/pageDetail/Detail";
-import Login from "../pages/pageLogin/Login";
 import Register from "../pages/pageRegister/Register";
-import Admin from "../pages/pageAdmin/Admin";
 import BookingTicket from "../pages/pageTicket/BookingTicket";
 import DetailLayout from "../components/layouts/DetailLayout";
 import TicketLayout from "../components/layouts/TicketLayout";
+import Dashborad from "../pages/pageAdmin/Dashborad";
+import AdminLayout from "../components/layouts/AdminLayout";
+import FilmManagementPage from "../pages/pageAdmin/FilmManagementPage/FilmManagementPage";
+import Admins from "../pages/pageAdmin/Admins";
+import UserManagePage from "../pages/pageAdmin/UserManagerPage";
 
 const Router = () => {
   const routing = useRoutes([
@@ -39,10 +41,6 @@ const Router = () => {
       element: <OurLayout />,
       children: [
         {
-          path: "login",
-          element: <Login />,
-        },
-        {
           path: "register",
           element: <Register />,
         },
@@ -53,8 +51,16 @@ const Router = () => {
       element: <AdminLayout />,
       children: [
         {
-          path: "admin",
-          element: <Admin />,
+          path: "admins",
+          element: <Admins />,
+        },
+        {
+          path: "film",
+          element: <FilmManagementPage />,
+        },
+        {
+          path: "users",
+          element: <UserManagePage />,
         },
       ],
     },

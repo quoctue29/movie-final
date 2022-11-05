@@ -1,0 +1,6 @@
+.ant-switch {
+  background-color: rgb(216, 216, 216);
+}
+.ant-switch-checked {
+  background-color: rgb(53, 53, 231);
+}

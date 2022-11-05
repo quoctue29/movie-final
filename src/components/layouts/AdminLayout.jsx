@@ -1,13 +1,13 @@
-import React from 'react'
+import React from "react";
 import { Outlet } from "react-router-dom";
 const AdminLayout = () => {
   return (
     <div>
-    <main>
-      <Outlet />
-    </main>
-  </div>
-  )
-}
+      <main>
+        <Outlet />
+      </main>
+    </div>
+  );
+};
 
-export default AdminLayout
+export default AdminLayout;
